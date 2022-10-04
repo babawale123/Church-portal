@@ -1,0 +1,56 @@
+{% extends 'inc/base.html' %}
+{% load static %}
+{% block content %}
+
+
+
+	<div class="row">
+		<div class="col-md-3">
+			
+		</div>
+
+		<div class="col-md-6">
+			<form class="form-horizontal" role="form" method="POST">
+				 {% csrf_token %}
+
+			  <div class="form-group">
+			    <label class="control-label col-sm-2" for="email">Name:</label>
+			    <div class="col-sm-10">
+                  {{ form.name }}
+			    </div>
+			  </div>
+			  
+			  <div class="form-group">
+				   <label class="control-label col-sm-2" for="pwd">Subject:</label>
+				    <div class="col-sm-10">
+                  {{ form.subject }}
+				    </div>
+			  </div>
+
+			  <div class="form-group">
+				   <label class="control-label col-sm-2" for="pwd">Request:</label>
+				    <div class="col-sm-10">
+                  {{ form.message }}
+				    </div>
+			  </div>
+			  {% if messages %}
+				{% for message in massages %}
+					<div class="alert alert-success"  role="alert">
+						{{ message }}
+					</div>
+				{% endfor %}
+			 {% endif %}
+
+			  <div class="form-group">
+			    <div class="col-sm-offset-2 col-sm-10">
+			      <button type="submit" class="btn btn-info">Submit</button>
+			    </div>
+			  </div>
+			</form>
+		</div>
+
+		<div class="col-md-3">
+			
+		</div>
+	</div>
+{% endblock content %}

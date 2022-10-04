@@ -1,0 +1,16 @@
+{% extends 'inc/base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container">
+	<div class="row">
+		<div class="card m-auto">
+			<div class="card-body my-2">
+				<h1 class="card-title">{{ message.subject }}</h1>
+				<p class="card-text">{{ message.message }}</p>
+				<p class="card-text">{{ message.date }}</p>
+			</div>
+		</div>
+	</div>
+</div>
+{% endblock %}

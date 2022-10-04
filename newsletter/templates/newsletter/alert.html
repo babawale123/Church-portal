@@ -1,0 +1,28 @@
+<!-- <div class="col-lg-6 col-md-6 footer-newsletter">
+	            <center><h3>Our Newsletter</h3></center>
+	  			{% if messages %}
+	  				{% for message in massages %}
+	  				<div % if message.tags %} class="{% message.tags %}" {% endif %} role="alert">
+	  					<button type="button" class="close" data-dismiss="alert"aria-label=Close><span aria-hidden="true">&times;</span></button>
+	  					{{ message }}
+	  				</div>
+	  				{% endfor %}
+	  			{% else %}
+	            <form action="" method="POST">{% csrf_token %}
+	              {{ form }}<center><input class="btn btn-default mt-2 mb-2" type="submit" value="Subscribe"></center>
+	              
+	            </form>
+	            {% endif %}
+	    </div> -->
+
+
+
+	    <!-- subject = "Thank you for Joining Our NewsLetter"
+			from_email = settings.EMAIL_HOST_USER
+			to_email = [instance.email]
+			with open(settings.BASE_DIR + "/newsletter/templates/newsletter/sign_up_email.txt") as f:
+				signup_message = f.read()
+			message = EmailMultiAlternatives(subject=subject, body=signup_message, from_email=from_email, to=to_email)
+			html_template = get_template("newsletter/sign_up_email.html").render()
+			message.attach_alternative(html_template, "text/html")
+			message.send() -->

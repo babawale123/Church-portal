@@ -1,0 +1,31 @@
+{% extends 'inc/base.html' %}
+{% load static %}
+
+{% block content %}
+<section class="more-services section-bg">
+    <div class="container">
+
+        <div class="section-title">
+          <h2>Upcoming Events</h2>
+        </div>
+
+        <div class="row">
+        {% for events in events %}
+
+        <div class="col-lg-4 col-md-6 d-flex align-items-stretch mb-5 mb-lg-0">
+            <div class="card">
+             <img src="{{ events.thumb.url }}" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title"><a href="{{ events.thumb.url }}" data-lightbox="gallary" data-title="{{ events.name }}">{{ events.name }}</a></h5>
+                <p class="card-text">{{ events.snippet }}</p>
+         </div>
+            </div>
+         </div>
+
+        {% endfor %}
+
+      </div>
+      <a href="https://paystack.com/pay/153cdsf4vr" class="btn btn-success">Pay</a>
+    </div>
+</section>
+{% endblock %}

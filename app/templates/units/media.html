@@ -1,0 +1,35 @@
+{% extends 'inc/base.html' %}
+{% load static %}
+
+{% block content %}
+
+<section id="team" class="team">
+  <div class="container">
+
+	    <div class="section-title">
+	      <h2>Our Media Team</h2>
+	      <p></p>
+	    </div>
+		<div class="row">
+		{% for media in wale %}
+
+			<div class="col-xl-3 col-lg-4 col-md-6" data-wow-delay="0.1s">
+	            <div class="member">
+	              <img src="{{ media.thumb.url }}" class="img-fluid" alt="">
+	              <div class="member-info">
+	                <div class="member-info-content">
+	                  <h4>{{ media.name }}</h4>
+	                </div>
+	                <div class="social">
+	                  <a href="{{media.twitter}}"><i class="icofont-twitter"></i></a>
+	                  <a href="{{media.fbook}}"><i class="icofont-facebook"></i></a>
+	                </div>
+	              </div>
+	            </div>
+	        </div>
+	          {% endfor %}
+
+	        </div>
+	</div>
+</section>
+{% endblock %}

@@ -1,0 +1,30 @@
+{% extends 'inc/base.html' %}
+{% load static %}
+
+{% block content %}
+<section class="more-services section-bg">
+ <div class="container">
+      <div class="section-title">
+          <h2>More From The Pastor Desks</h2>
+          
+       </div>
+		<div class="row">
+						{% for message in wale %}
+
+				<div class="col-lg-3 col-md-6 d-flex align-items-stretch mb-5 mb-lg-0 mt-3 ">
+
+				            <div class="card">
+				              <div class="card-body">
+				                <h5 class="card-title"><a href="">{{ message.subject }}</a></h5>
+				                <p class="card-text">{{ message.snippet }}</p>
+				                <p class="card-text"><strong>{{ message.date }}</strong></p>
+				                <a href="{% url 'app:detail' message.slug %}" class="btn">Explore more</a>
+				             </div>
+				 </div>
+		</div>
+						{% endfor %}
+						<hr>
+
+</div>
+</section>
+{% endblock %}

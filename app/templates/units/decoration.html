@@ -1,0 +1,35 @@
+{% extends 'inc/base.html' %}
+{% load static %}
+
+{% block content %}
+
+<section id="team" class="team">
+  <div class="container">
+
+	    <div class="section-title">
+	      <h2>Our Decoration Unit</h2>
+	      <p></p>
+	    </div>
+		<div class="row">
+		{% for decoration in wale %}
+
+			<div class="col-xl-3 col-lg-4 col-md-6" data-wow-delay="0.1s">
+	            <div class="member">
+	              <img src="{{ decoration.thumb.url }}" class="img-fluid" alt="">
+	              <div class="member-info">
+	                <div class="member-info-content">
+	                  <h4>{{ decoration.name }}</h4>
+	                </div>
+	                <div class="social">
+	                  <a href="{{decoration.twitter}}"><i class="icofont-twitter"></i></a>
+	                  <a href="{{decoration.fbook}}"><i class="icofont-facebook"></i></a>
+	                </div>
+	              </div>
+	            </div>
+	        </div>
+	          {% endfor %}
+
+	        </div>
+	</div>
+</section>
+{% endblock %}

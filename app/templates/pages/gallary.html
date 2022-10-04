@@ -1,0 +1,25 @@
+{% extends 'inc/base.html' %}
+{% load static %}
+{% block content %}
+
+<section id="team" class="team">
+	<div class="container">
+		<div class="row">
+		{% for gallary in wale %}
+
+			<div class="col-lg-3 col-md-6 d-flex align-items-stretch mb-5 mb-lg-0 " data-wow-delay="0.1s">
+				<div class="member">
+	             <img src="{{ gallary.thumb.url }}" class="img-fluid" alt="" >
+	              <div class="member-info">
+	                <div class="member-info-content">
+	                  <a href="{{ gallary.thumb.url }}" data-lightbox="gallary" data-title="{{ gallary.description }}"><h4>{{ gallary.description }}</h4></a>
+	                </div>
+	                
+	              </div>
+	            </div>
+			</div>
+		{% endfor %}
+		</div>
+	</div>
+</section>
+{% endblock content %}

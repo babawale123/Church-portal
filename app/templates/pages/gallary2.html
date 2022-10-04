@@ -1,0 +1,22 @@
+{% extends 'inc/base.html' %}
+{% load static %}
+{% block content %}
+<div class="container">
+		<div class="row">
+			{% for gallary in wale %}
+
+			<div class="col-lg-3 col-md-6 d-flex align-items-stretch mb-5  mb-lg-0 " data-wow-delay="0.1s">
+					<div class="member">
+		            <a href="{{ gallary.thumb.url }}" data-lightbox="gallary" data-title="{{ gallary.description }}"> <img src="{{ gallary.thumb.url }}" class="img-fluid" alt="" ></a>
+		              <div class="member-info">
+		                <div class="member-info-content">
+		                  <span></span>
+		                </div>
+		                
+		              </div>
+		            </div>
+			</div>
+			{% endfor %}
+		</div>
+</div>
+{% endblock content %}

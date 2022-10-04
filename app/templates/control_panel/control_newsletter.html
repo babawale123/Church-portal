@@ -1,0 +1,23 @@
+{% extends "inc/control_base.html" %}
+{% load static %}
+
+{% block content %}
+  <div class="container">
+  	<div class="row">
+  		<div class="col-md-2">
+  			
+  		</div>
+
+  		<div class="col-md-8">
+		  	<form method="POST">{% csrf_token %}
+		      {{ form }} 
+		     <center><button class="btn btn-info mt-2 mb-2" type="submit">Send</button></center>
+		   </form> 
+  		</div>
+
+  		<div class="col-md-2">
+  			
+  		</div>
+  	</div>
+  </div>
+{% endblock %}
